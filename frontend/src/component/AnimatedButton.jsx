@@ -1,8 +1,9 @@
 import { motion as Motion, spring } from "motion/react";
 
-export default function ANimatedButton({children}) {
+export default function ANimatedButton({children,...props}) {
   return (
     <Motion.button
+    {...props}
       className="relative w-50 h-15 cursor-pointer bg-transparent border border-border text-foreground hover:border-primary/50 focus:outline-none focus-visible:ring-2
                focus-visible:ring-primary focus-visible:ring-offset-2
                  disabled:opacity-50 disabled:cursor-not-allowed group

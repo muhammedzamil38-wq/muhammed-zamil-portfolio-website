@@ -47,6 +47,11 @@ const skills = [
 ];
 
 const Hero = () => {
+  const openPdf = () => {
+    const pdfUrl = "/MUHAMMED-ZAMIL-OG-RESUME.pdf";
+    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -127,7 +132,7 @@ const Hero = () => {
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedButton><Download className="w-5 h-5" /> Download CV</AnimatedButton>
+              <AnimatedButton onClick={()=>openPdf()}><Download className="w-5 h-5" /> Download CV</AnimatedButton>
             </Motion.div>
             {/* Social Links */}
             <Motion.div
