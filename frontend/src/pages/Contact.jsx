@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, X } from "lucide-react";
 import { motion as Motion } from "motion/react";
 import Button from "../component/Button";
 import React, { useState } from "react";
@@ -166,6 +166,7 @@ const Contact = () => {
                     <AlertCircle className="w-5 h-5 shrink-0" />
                   )}
                   <p className="text-sm">{submitStatus.message}</p>
+                  <X className="ml-auto cursor-pointer" onClick={()=>setSubmitStatus({...submitStatus,type:null})}/>
                 </div>
               )}
             </form>
